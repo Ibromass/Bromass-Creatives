@@ -5,6 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bromass Creatives | Design, Ads & Web</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Motion system */
+    .hero-copy .eyebrow, .hero-text, .hero-actions { animation: fade-up .8s both; }
+    .hero-text { animation-delay: .25s; }.hero-actions { animation-delay: .4s; }
+    .hero-title span, .hero-title em { animation: title-rise .9s both; }
+    .hero-title span:nth-child(2) { animation-delay: .1s; }.hero-title em { animation-delay: .2s; }
+    .hero-visual { animation: fade-up 1s .25s both; overflow: visible; }
+    .hero-visual img { animation: slow-zoom 11s ease-in-out infinite alternate; }
+    .hero-card { animation: card-float 4s ease-in-out infinite; }
+    .orb-one, .orb-two { animation: orbit 6s ease-in-out infinite; }.orb-two { animation-delay: -3s; }
+    .reveal.from-left { transform: translateX(-70px) rotate(-1deg); }
+    .reveal.from-right { transform: translateX(70px) rotate(1deg); }
+    .reveal.from-bottom { transform: translateY(65px) scale(.97); }
+    .reveal.visible { opacity: 1; transform: translate(0) rotate(0) scale(1); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+    .gallery img { transition: transform .55s cubic-bezier(.2,.8,.2,1), filter .4s; }.gallery img:hover { transform: scale(1.045); filter: saturate(1.15); }
+    .rows article, .webs a, .proof-grid article { transition: transform .3s, background .3s; }.rows article:hover, .webs a:hover, .proof-grid article:hover { transform: translateX(12px); background: #ece5da; }
+    .dark .webs a:hover, .dark .process-steps article:hover { background: #242421; }
+    .btn, .whatsapp-float, .footer-cta { transition: transform .25s, box-shadow .25s; }.btn:hover, .whatsapp-float:hover, .footer-cta:hover { transform: translateY(-4px); }
+    @keyframes fade-up { from { opacity:0; transform:translateY(25px); } to { opacity:1; transform:none; } }
+    @keyframes title-rise { from { opacity:0; transform:translateY(100%); } to { opacity:1; transform:none; } }
+    @keyframes slow-zoom { to { transform:scale(1.08); } }
+    @keyframes card-float { 50% { transform:translateY(-10px); } }
+    @keyframes orbit { 50% { transform:translate(20px,-28px) scale(1.13); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; } }
+  </style>
 </head>
 <body>
   <div class="cursor-glow"></div>
